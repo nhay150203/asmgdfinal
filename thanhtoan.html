@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body ng-app="myApp">
+    <div class="giohang">
+        <a onclick="showcart();"><img src="images/cart.png"><span id="countsp">0</span></a>
+    </div>
+    <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+            </tr>
+            <tbody id="mycart">
+            </tbody>
+            <tr>
+                <td><a href="thanhtoan.html"><button type="button" class="thanhtoan">Chốt đơn và thanh toán</button></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+        <div id="header">
+            <nav class="container">
+                <ul id="main-menu">
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href=""> SẢN PHẨM</a>
+                        <ul class="sub-menu">
+                            <li><a href="">TEE</a></li>
+                            <li><a href="">SHORT</a> </li>
+                            <li><a href="">PANTS</a> </li>
+                            <li><a href="">SHIRT</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="">GIỚI THIỆU</a></li>
+                    <li><a href="form.html">ĐĂNG KÍ / ĐĂNG NHẬP</a></li>
+                    <li><a href="">LIÊN HỆ</a></li>
+                    <li><a href="thanhtoan.html">GIỎ HÀNG</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row mb ">
+            <form name="frm">
+                <div class="row">
+                    <h1>THÔNG TIN NHẬN HÀNG</h1>
+
+                    <table class="thongtinnhanhang">
+                        <tr>
+                            <td width="20%">Họ tên</td>
+                            <td><input placeholder="Nhập họ tên" type="text" name="hoten" required ng-model="hoten">
+                                <em ng-if="frm.hoten.$invalid">Họ và Tên không được để trống</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Địa chỉ</td>
+                            <td><input placeholder="Nhập Địa chỉ" type="text" name="diachi" required
+                                    ng-model="diachi">
+                                <em ng-if="frm.diachi.$invalid">Địa Chỉ không được để trống</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Điện thoại</td>
+                            <td><input placeholder="Nhập số điện thoại" type="text" name="dienthoai" required
+                                    ng-model="dienthoai">
+                                <em ng-if="frm.dienthoai.$invalid">Điện thoại không được để trống</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input placeholder="Nhập Email" type="text" name="email" required ng-model="email">
+                                <em ng-if="frm.email.$invalid">Email không được để trống</em>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+            <div class="row mb">
+                <h1>GIỎ HÀNG</h1>
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Hình</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền ($)</th>
+                    </tr>
+                    <tbody id="mycart1">
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div class="row mb"> -->
+                <button type="reset" class="dongy" id="dathang" onclick="dongyTT();">ĐỒNG Ý ĐẶT HÀNG</button>
+            <!-- </div> -->
+        </div>
+        <footer>
+            <div class="link footer-item">
+                <h3>Liên kết</h3>
+                <a href="/index.html">Trang chủ</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Hệ thống cửa hàng</a>
+                <a href="#">Giới thiệu</a>
+            </div>
+            <div class="content footer-item">
+                <h3>Thông tin liên hệ</h3>
+                <a href="#">Facebook</a>
+                <a href="https://www.instagram.com/">Intagram</a>
+                <a href="#">Google</a>
+                <a href="#">Zalo</a>
+            </div>
+        </footer>
+        <script src="js/cart.js"></script>
+        <script>
+            laydon();
+            showcountsp();
+        </script>
+
+</body>
+
+</html>
+<script>
+    document.getElementById("showcart").style.display = "none";
+    var app = angular.module("myApp", []);
+</script>

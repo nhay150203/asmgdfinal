@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+/* header */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: grey;
+}
+
+#header > img {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.header-item {
+    width: 100%;
+}
+nav {
+    /* display: flex; */
+    justify-items: center;
+    justify-content: space-between;
+}
+#logo {
+    max-width: 100px;
+    padding: 1px 0px;
+}
+#logo img {
+    width: 170px;
+    
+}
+#main-menu {
+    display: flex;
+    list-style: none;
+}
+#main-menu li a {
+    color: #000;
+    display: block;
+    padding:18px 20px;
+    text-decoration: none;
+}
+#main-menu li {
+    position: relative;
+}
+#main-menu li:hover {
+    box-shadow:rgba(6, 53, 79, 0.315) 0px 3px 8px ;
+    border-radius: 30px;
+}
+#main-menu ul.sub-menu {
+    width: 260px;
+    position: absolute;
+    background-color:white ;
+    padding: 0px 0px;
+    list-style: none;
+    border: 1px solid white;
+    display: none;
+    border-radius: 30px;
+}
+#main-menu li:hover > ul.sub-menu {
+    display: block;
+}
+#main-menu ul.sub-menu a {
+    padding: 16px 16px;
+    border-bottom: 0.5px solid rgb(156, 150, 150);
+    left: 0px;
+}
+
+/* nội dung*/
+.boxcenter {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.row {
+    float: left;
+    width: 100%;
+}
+.demo {
+    background-color: antiquewhite;
+    min-height: 100px;
+}
+
+.header {
+    background-image: linear-gradient(#F90, #F60);
+    border: 1px #F60 solid;
+    color: rgb(65, 61, 61);
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.giohang {
+    position: fixed;
+    border-radius: 10px;
+    right: 20px;
+    top: 20px;
+    height: 60px;
+    background-image: linear-gradient(#F90, #F60);
+    padding: 10px;
+    z-index: 5;
+}
+
+.giohang img {
+    width: 40px;
+    float: left;
+    margin-right: 5px;
+}
+
+.giohang span {
+    font-weight: bold;
+    font-size: 2vw;
+    color: yellow;
+    height: 40px;
+    line-height: 40px;
+}
+
+#showcart {
+    position: fixed;
+    border-radius: 10px;
+    right: 20px;
+    top: 80px;
+    padding: 10px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    z-index: 4;
+}
+
+
+.header h1 {
+    margin: 20px;
+    font-size: 1.5em;
+    color: #FFF;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0px;
+    font-size: 1.2vw;
+    color: #F60;
+}
+
+.boxsp {
+    float: left;
+    width: calc(32% - 5px);
+    min-height: 300px;
+    border: 1px #EEE solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 5px;
+}
+
+.boxsp input {
+    width: 40px;
+    position: absolute;
+    right: 5px;
+    bottom: 40px;
+    border-radius: 5px;
+    border: 1px #FC0 solid;
+}
+
+.boxsp button {
+    width: 80px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    background-color: #FF6600;
+    border-radius: 5px;
+    border: 1px #FC0 solid;
+    padding: 5px 0px;
+    color: #EEE;
+}
+
+.boxsp .img {
+    min-height: 230px;
+    text-align: center;
+}
+
+.img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu ul {
+    padding: 0px 10px;
+}
+
+.menu ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 0px 15px;
+}
+
+.menu ul li a {
+    color: #CCC;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.menu ul li a:hover {
+    color: white;
+    font-size: 0.8vw;
+}
+.boxsp :hover {
+    cursor: pointer;
+}
+
+/* giỏ hàng */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #999;
+    padding: 10px;
+}
+
+th,
+td {
+    border: 1px grey solid;
+}
+
+td div {
+    width: calc(100% - 20px);
+    padding: 0px 10px;
+    text-align: right;
+}
+
+th div {
+    width: calc(100% - 10px);
+    padding: 0px 5px;
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+td img {
+    width: 100px;
+}
+
+.mb {
+    margin-bottom: 20px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mr {
+    margin-right: 2%;
+}
+input{
+    width: 60%;
+}
+
+/* thanh toán */
+em{
+    /* margin-left: 420px; */
+    color: red;
+    font-size: 20px;
+}
+
+/* css footer */
+footer{
+    border-top: 5px double #24A19C;
+    width: 100%;
+    position: relative;
+    clear: both;
+}
+footer .footer-item{
+    float: left;
+    color: #24A19C;
+    margin: 20px 0;
+}
+footer .footer-item img{
+    margin-top: 40px;
+    height: 100px;
+}
+footer .footer-item a{
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    
+}
+footer .about h3{
+    margin: 20px;
+}
+footer .link h3{
+    margin: 10px;
+}
+footer .content h3{
+    margin: 10px;
+}
+footer .about{
+    width: 20%;
+}
+footer .link{
+    width: 40%;
+    float: right;
+}
+footer .content{
+    width: 40%;
+    float: right;
+}
+footer .footer-item a:hover{
+    color: #24A19C;
+    letter-spacing: 2px
+}
